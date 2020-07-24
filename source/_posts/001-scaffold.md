@@ -35,7 +35,7 @@ mvn io.quarkus:quarkus-maven-plugin:1.6.1.Final:create \
 ## A Quarkus application using its website
 Quarkus also offers the ability to scaffold an application using the Quarkus website. This is the most simple way to do it, you only to visit the following link https://code.quarkus.io/ and click on the `Generate your application button`
 
-![https://code.quarkus.io/](/images/001-scaffold-images/scaffold-quarkus-website.png  "https://code.quarkus.io/")
+![https://code.quarkus.io/](/quarkus/images/001-scaffold-images/scaffold-quarkus-website.png  "https://code.quarkus.io/")
 
 Now, you're ready to have fun. If you decided to use maven as the build tool for your project, you need to use the following maven goal to deploy the app:
 
@@ -57,4 +57,4 @@ hello
 status=200  size=5 time=0.026 content-type="text/plain;charset=UTF-8"
 ```
 
-So far so good, your first Quarkus app is up and running. That's all folks! :v:
+So far so good, your first Quarkus app is up and running. That's all folks!
