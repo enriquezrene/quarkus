@@ -1,9 +1,8 @@
 ---
-title: 001-scaffold
+title: Scaffolding a Quarkus Application
 date: 2020-07-23 21:44:11
 tags: quarkus
 ---
-# Scaffolding a Quarkus Application
 Quarkus offers 4 different ways to scaffold a new application:
 
 - mvn plugin
