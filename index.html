@@ -91,21 +91,38 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Quarkus offers 4 different ways to scaffold a new application:</p>
+        <p>Quarkus offers different ways to scaffold a new application:</p>
 <ul>
-<li>mvn plugin</li>
-<li>gradle plugin</li>
-<li>visual studio code</li>
-<li>Quarkus website</li>
+<li>A Quarkus application using Maven as build tool</li>
+<li>A Quarkus application using gradle as build tool</li>
+<li>A Quarkus application using its website</li>
 </ul>
+<h2 id="A-Quarkus-application-using-Maven-as-build-tool"><a href="#A-Quarkus-application-using-Maven-as-build-tool" class="headerlink" title="A Quarkus application using Maven as build tool"></a>A Quarkus application using Maven as build tool</h2><p>Assuming you have installed Maven on your machine, you just need to use the quarkus-maven-plugin as follows:</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">mvn io.quarkus:quarkus-maven-plugin:1.6.1.Final:create \</span><br><span class="line">      -DprojectGroupId=org.acme \</span><br><span class="line">      -DprojectArtifactId=mvn-quarkus-app \</span><br><span class="line">      -DclassName=<span class="string">"org.acme.quickstart.HelloWorldResource"</span> \</span><br><span class="line">      -Dpath=<span class="string">"/hello"</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="A-Quarkus-application-using-Gradle-as-build-tool"><a href="#A-Quarkus-application-using-Gradle-as-build-tool" class="headerlink" title="A Quarkus application using Gradle as build tool"></a>A Quarkus application using Gradle as build tool</h2><p>In this case you also need to have installed Maven on your machine. Then, you just need to use the same quarkus-maven-plugin with an additional parameter as follows:</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">mvn io.quarkus:quarkus-maven-plugin:1.6.1.Final:create \</span><br><span class="line">      -DprojectGroupId=org.acme \</span><br><span class="line">      -DprojectArtifactId=gradle-quarkus-app \</span><br><span class="line">      -DclassName=<span class="string">"org.acme.quickstart.HelloWorldResource"</span> \</span><br><span class="line">      -Dpath=<span class="string">"/hello"</span> \</span><br><span class="line">      -DbuildTool=gradle</span><br></pre></td></tr></table></figure>
+
+<h2 id="A-Quarkus-application-using-its-website"><a href="#A-Quarkus-application-using-its-website" class="headerlink" title="A Quarkus application using its website"></a>A Quarkus application using its website</h2><p>Quarkus also offers the ability to scaffold an application using the Quarkus website. This is the most simple way to do it, you only to visit the following link <a href="https://code.quarkus.io/" target="_blank" rel="noopener">https://code.quarkus.io/</a> and click on the <code>Generate your application button</code></p>
+<p><img src="/images/001-scaffold-images/scaffold-quarkus-website.png" alt="https://code.quarkus.io/" title="https://code.quarkus.io/"></p>
+<p>Now, you’re ready to have fun. If you decided to use maven as the build tool for your project, you need to use the following maven goal to deploy the app:</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mvn compile quarkus:dev</span><br></pre></td></tr></table></figure>
+
+<p>If you decided to go for gradle, then you need to use the following gradle task:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">.&#x2F;gradlew quarkusDev</span><br></pre></td></tr></table></figure>
+
+<p>Now, feel free to use any rest client to hit the default endpoint created. If you like curl, use the following curl command to test the app and you will get a similar result as follows:</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ curl http://localhost:8080/hello</span><br><span class="line">hello</span><br><span class="line">status=200  size=5 time=0.026 content-type=<span class="string">"text/plain;charset=UTF-8"</span></span><br></pre></td></tr></table></figure>
+
+<p>So far so good, your first Quarkus app is up and running. That’s all folks! :v:</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://enriquezrene.github.io/quarkus/2020/07/23/001-scaffold/" data-id="ckczmyhbg0001qtst5z8w0440" class="article-share-link">Share</a>
+      <a data-url="https://enriquezrene.github.io/quarkus/2020/07/23/001-scaffold/" data-id="ckczqzm5r000047std8c82fxv" class="article-share-link">Share</a>
       
       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/quarkus/" rel="tag">quarkus</a></li></ul>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/quarkus-maven-gradle/" rel="tag">quarkus, maven, gradle</a></li></ul>
 
     </footer>
   </div>
@@ -153,7 +170,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://enriquezrene.github.io/quarkus/2020/07/23/hello-world/" data-id="ckczmyhb50000qtst9qxl8kc2" class="article-share-link">Share</a>
+      <a data-url="https://enriquezrene.github.io/quarkus/2020/07/23/hello-world/" data-id="ckczqzm5y000147stbdqhd7z0" class="article-share-link">Share</a>
       
       
     </footer>
@@ -176,7 +193,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/quarkus/" rel="tag">quarkus</a></li></ul>
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/quarkus-maven-gradle/" rel="tag">quarkus, maven, gradle</a></li></ul>
     </div>
   </div>
 
@@ -186,7 +203,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/quarkus/" style="font-size: 10px;">quarkus</a>
+      <a href="/tags/quarkus-maven-gradle/" style="font-size: 10px;">quarkus, maven, gradle</a>
     </div>
   </div>
 
