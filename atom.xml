@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Quarkus</title>
+  <icon>https://enriquezrene.github.io/quarkus/icon.png</icon>
+  <subtitle>Tips and Tricks</subtitle>
+  <link href="/quarkus/atom.xml" rel="self"/>
+  
+  <link href="https://enriquezrene.github.io/quarkus/"/>
+  <updated>2020-07-31T05:03:45.536Z</updated>
+  <id>https://enriquezrene.github.io/quarkus/</id>
+  
+  <author>
+    <name>Rene Enriquez</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Building RESTful web services</title>
+    <link href="https://enriquezrene.github.io/quarkus/2020/07/24/002-rest-api/"/>
+    <id>https://enriquezrene.github.io/quarkus/2020/07/24/002-rest-api/</id>
+    <published>2020-07-25T01:37:27.000Z</published>
+    <updated>2020-07-31T05:03:45.536Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;In this post we are going to learn how to build RESTful web services using Quarkus. Let’s start using the project we created in the &lt;a
+        
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Scaffolding a Quarkus Application</title>
+    <link href="https://enriquezrene.github.io/quarkus/2020/07/23/001-scaffold/"/>
+    <id>https://enriquezrene.github.io/quarkus/2020/07/23/001-scaffold/</id>
+    <published>2020-07-24T02:44:11.000Z</published>
+    <updated>2020-07-24T04:58:29.332Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;Quarkus offers different ways to scaffold a new application:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;A Quarkus application using Maven as build tool&lt;/li&gt;
+&lt;li&gt;A
+        
+      
+    
+    </summary>
+    
+    
+    
+      <category term="quarkus, maven, gradle" scheme="https://enriquezrene.github.io/quarkus/tags/quarkus-maven-gradle/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="https://enriquezrene.github.io/quarkus/2020/07/23/hello-world/"/>
+    <id>https://enriquezrene.github.io/quarkus/2020/07/23/hello-world/</id>
+    <published>2020-07-24T02:21:59.759Z</published>
+    <updated>2020-07-24T02:21:59.759Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a
+        
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+</feed>
