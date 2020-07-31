@@ -5,13 +5,17 @@
   
 
   
-  <title>Quarkus</title>
+  <title>Building RESTful web services | Quarkus</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Quarkus">
-<meta property="og:url" content="https://enriquezrene.github.io/quarkus/index.html">
+  <meta name="description" content="In this post we are going to learn how to build RESTful web services using Quarkus. Let’s start using the project we created in the last post. We are going to implement the following endpoints:    HTT">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Building RESTful web services">
+<meta property="og:url" content="https://enriquezrene.github.io/quarkus/2020/07/24/002-rest-api/index.html">
 <meta property="og:site_name" content="Quarkus">
+<meta property="og:description" content="In this post we are going to learn how to build RESTful web services using Quarkus. Let’s start using the project we created in the last post. We are going to implement the following endpoints:    HTT">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2020-07-25T01:37:27.000Z">
+<meta property="article:modified_time" content="2020-07-31T05:03:45.536Z">
 <meta property="article:author" content="Rene Enriquez">
 <meta name="twitter:card" content="summary">
   
@@ -67,9 +71,7 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-    <article id="post-002-rest-api" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-002-rest-api" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/quarkus/2020/07/24/002-rest-api/" class="article-date">
   <time datetime="2020-07-25T01:37:27.000Z" itemprop="datePublished">2020-07-24</time>
@@ -82,8 +84,8 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/quarkus/2020/07/24/002-rest-api/">Building RESTful web services</a>
+    <h1 class="article-title" itemprop="name">
+      Building RESTful web services
     </h1>
   
 
@@ -171,130 +173,19 @@
     </footer>
   </div>
   
-</article>
-
-
+    
+<nav id="article-nav">
   
-    <article id="post-001-scaffold" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/quarkus/2020/07/23/001-scaffold/" class="article-date">
-  <time datetime="2020-07-24T02:44:11.000Z" itemprop="datePublished">2020-07-23</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/quarkus/2020/07/23/001-scaffold/">Scaffolding a Quarkus Application</a>
-    </h1>
+    <a href="/quarkus/2020/07/23/001-scaffold/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Scaffolding a Quarkus Application</div>
+    </a>
   
+</nav>
 
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Quarkus offers different ways to scaffold a new application:</p>
-<ul>
-<li>A Quarkus application using Maven as build tool</li>
-<li>A Quarkus application using gradle as build tool</li>
-<li>A Quarkus application using its website</li>
-</ul>
-<h2 id="A-Quarkus-application-using-Maven-as-build-tool"><a href="#A-Quarkus-application-using-Maven-as-build-tool" class="headerlink" title="A Quarkus application using Maven as build tool"></a>A Quarkus application using Maven as build tool</h2><p>Assuming you have installed Maven on your machine, you just need to use the quarkus-maven-plugin as follows:</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">mvn io.quarkus:quarkus-maven-plugin:1.6.1.Final:create \</span><br><span class="line">      -DprojectGroupId=org.acme \</span><br><span class="line">      -DprojectArtifactId=mvn-quarkus-app \</span><br><span class="line">      -DclassName=<span class="string">"org.acme.quickstart.HelloWorldResource"</span> \</span><br><span class="line">      -Dpath=<span class="string">"/hello"</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="A-Quarkus-application-using-Gradle-as-build-tool"><a href="#A-Quarkus-application-using-Gradle-as-build-tool" class="headerlink" title="A Quarkus application using Gradle as build tool"></a>A Quarkus application using Gradle as build tool</h2><p>In this case you also need to have installed Maven on your machine. Then, you just need to use the same quarkus-maven-plugin with an additional parameter as follows:</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">mvn io.quarkus:quarkus-maven-plugin:1.6.1.Final:create \</span><br><span class="line">      -DprojectGroupId=org.acme \</span><br><span class="line">      -DprojectArtifactId=gradle-quarkus-app \</span><br><span class="line">      -DclassName=<span class="string">"org.acme.quickstart.HelloWorldResource"</span> \</span><br><span class="line">      -Dpath=<span class="string">"/hello"</span> \</span><br><span class="line">      -DbuildTool=gradle</span><br></pre></td></tr></table></figure>
-
-<h2 id="A-Quarkus-application-using-its-website"><a href="#A-Quarkus-application-using-its-website" class="headerlink" title="A Quarkus application using its website"></a>A Quarkus application using its website</h2><p>Quarkus also offers the ability to scaffold an application using the Quarkus website. This is the most simple way to do it, you only to visit the following link <a href="https://code.quarkus.io/" target="_blank" rel="noopener">https://code.quarkus.io/</a> and click on the <code>Generate your application button</code></p>
-<p><img src="/quarkus/images/001-scaffold-images/scaffold-quarkus-website.png" alt="https://code.quarkus.io/" title="https://code.quarkus.io/"></p>
-<p>Now, you’re ready to have fun. If you decided to use maven as the build tool for your project, you need to use the following maven goal to deploy the app:</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mvn compile quarkus:dev</span><br></pre></td></tr></table></figure>
-
-<p>If you decided to go for gradle, then you need to use the following gradle task:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">.&#x2F;gradlew quarkusDev</span><br></pre></td></tr></table></figure>
-
-<p>Now, feel free to use any rest client to hit the default endpoint created. If you like curl, use the following curl command to test the app and you will get a similar result as follows:</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ curl http://localhost:8080/hello</span><br><span class="line">hello</span><br><span class="line">status=200  size=5 time=0.026 content-type=<span class="string">"text/plain;charset=UTF-8"</span></span><br></pre></td></tr></table></figure>
-
-<p>So far so good, your first Quarkus app is up and running. That’s all folks!</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <div style="text-align: right;">
-        <span id="visits">Visits: <font class="count">--<font></span>
-        <span id="pageviews">&nbsp;Pageviews: <font class="count">--<font></span>
-      </div>
-      <a data-url="https://enriquezrene.github.io/quarkus/2020/07/23/001-scaffold/" data-id="ckd9rn9tx0000skstfad50i77" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/quarkus/tags/quarkus-maven-gradle/" rel="tag">quarkus, maven, gradle</a></li></ul>
-
-    </footer>
-  </div>
   
 </article>
-
-
-  
-    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/quarkus/2020/07/23/hello-world/" class="article-date">
-  <time datetime="2020-07-24T02:21:59.759Z" itemprop="datePublished">2020-07-23</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/quarkus/2020/07/23/hello-world/">Hello World</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <div style="text-align: right;">
-        <span id="visits">Visits: <font class="count">--<font></span>
-        <span id="pageviews">&nbsp;Pageviews: <font class="count">--<font></span>
-      </div>
-      <a data-url="https://enriquezrene.github.io/quarkus/2020/07/23/hello-world/" data-id="ckd9rn9uf0003sksth9hwcjfd" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-
 
 </section>
         
